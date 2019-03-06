@@ -1,10 +1,111 @@
 // Specific CSS for your home-page
 .home {
 
+  // VIDEO IN THE BEGINNING OF THE PAGE
   &_first-section {
     background-image: url('https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     height: 600px;
     width: 100%;
     background-size: cover;
   }
+
+  // ABOUT PART WITH ANOTHER VIDEO
+  &_second-section {
+    background-image: url('https://images.pexels.com/photos/1181397/pexels-photo-1181397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    height: 800px;
+    width: 100%;
+    background-size: cover;
+  }
+
+  // WHERE SOCIAL MEDIA AND COUNT UP IS
+  &_fourth-section {
+
+    &_social-media {
+      padding: 0 80px;
+      height: 100px;
+      width: 100%;
+      @include absCenter;
+
+      & i {
+        @include absCenter;
+        color: white;
+        height: 50px;
+        width: 50px;
+        background-color: #878787;
+        margin: 10px;
+        border-radius: 50%;
+
+        &:hover {
+          background-color: $main-color;
+        }
+      }
+    }
+
+    &_content {
+      display: flex;
+      justify-content: space-around;
+
+      &_one {
+        width: 280px;
+
+        & h4 {
+          color: $main-color;
+          font-family: $main-font;
+          font-size: 18px !important;
+        }
+
+        & p {
+          font-size: 14px;
+          color: #A0A0A0;
+          line-height: 20px;
+        }
+      }
+
+      &_two {
+
+        &_counter {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          & i {
+            font-size: 60px;
+            margin: 0 10px;
+            color: $main-color;
+          }
+
+          & p {
+            margin-bottom: 0;
+            font-size: 45px;
+            font-weight: bold;
+          }
+        }
+
+        &_text {
+          font-size: 16px;
+          width: 300px;
+          text-align: right;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &_bottom-text {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      height: 150px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: lighter;
+      color: $dark-gray;
+
+      & p {
+        width: 70%;
+      }
+    }
+  }
 }
+
