@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.home {
+
+  &_first-section {
+    background-image: url('https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+  }
+}
