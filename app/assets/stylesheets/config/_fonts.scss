@@ -21,3 +21,10 @@ $main-font: 'Noto Serif JP', serif;
   align-items: center;
   justify-content: center;
 }
+
+@mixin absCenterColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

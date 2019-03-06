@@ -107,5 +107,102 @@
       }
     }
   }
+
+  // WHERE THE TESTIMONIAL IS
+  &_fifth-section {
+    height: 400px;
+    background-color: $light-gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &_one {
+
+      & img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+      }
+    }
+
+    &_two {
+
+      & i {
+        font-size: 50px;
+        color: #EDEDED;
+        margin: 0 30px 20px 0;
+      }
+
+      & p {
+        font-family: $main-font;
+        font-size: 15px;
+        font-weight: lighter;
+        color: $dark-gray;
+        width: 600px;
+        margin-left: 50px;
+      }
+
+      & h6 {
+        font-family: $main-font;
+        font-weight: bolder;
+        font-size: 25px;
+        margin-top: 50px;
+        margin-left: 50px;
+      }
+    }
+  }
+
+  &_sixth-section {
+    height: 900px;
+    @include absCenterColumn
+
+    &_one img {
+      @include absCenter
+      width: 800px;
+      height: 500px;
+    }
+
+    &_two {
+
+    }
+  }
+
+  &_seventh-section {
+    background-color: $light-gray;
+    height: 500px;
+    width: 100%;
+  }
+
+  &_eigth-section {
+    height: 800px;
+    width: 100%;
+  }
+
+  &_ninth-section {
+    @include absCenterColumn
+
+    & h4 {
+      text-align: center;
+      font-family: $main-font;
+      color: $main-color;
+      font-size: 20px;
+    }
+
+    &_logos {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 100px;
+
+      & img {
+        height: 30px;
+      }
+
+      & img:nth-child(5) {
+        height: 80px;
+      }
+    }
+  }
 }
 
