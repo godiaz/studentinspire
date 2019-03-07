@@ -27,6 +27,7 @@
       @include absCenter;
 
       & i {
+        font-size: 22px;
         @include absCenter;
         color: white;
         height: 50px;
@@ -203,7 +204,7 @@
 
 
 * { box-sizing: border-box; }
-$duration: 50s;
+$duration: 90s;
 
 @-webkit-keyframes ticker {
   0% {
@@ -259,7 +260,7 @@ $duration: 50s;
 
     &__item {
       display: inline-block;
-      padding: 0 450px;
+      padding: 0 200px;
       font-size: 2rem;
       color: white;
 
