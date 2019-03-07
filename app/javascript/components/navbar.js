@@ -5,7 +5,7 @@ const initUpdateNavbarOnScroll = () => {
   const white = document.querySelector('.white-logo');
   if (navbar) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= window.innerHeight / 4) {
         gray.style.display = "block"
         white.style.display = "none"
         navbar.classList.add('navbar-hoxton-white');
@@ -19,3 +19,6 @@ const initUpdateNavbarOnScroll = () => {
 };
 
 export { initUpdateNavbarOnScroll };
+
+
+

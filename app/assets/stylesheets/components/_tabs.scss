@@ -1,0 +1,63 @@
+.tabs {
+
+  &_first {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    & a {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      & :active, &:visited, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#tab-container {
+  width: 100%;
+  height: 600px;
+  background-color: $main-color-verydark;
+}
+
+
+/* Style the buttons */
+.btn {
+  width: 100%;
+  border-radius: 0px !important;
+  border: none;
+  outline: none;
+  background-color: $main-color;
+  cursor: pointer;
+  border-right: 1px solid $main-color-dark;
+
+  & input[type="button"]
+  {
+      border: none;
+      outline:none;
+  }
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active, .btn:hover {
+  background-color: $main-color-verydark;
+  color: white;
+  border-radius: 0;
+  text-decoration: none;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.btn.active:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+  box-shadow: none !important;
+}

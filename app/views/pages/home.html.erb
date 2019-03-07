@@ -6,6 +6,17 @@
     <!-- CONTENT MISSING-->
   </div>
   <div class="home_third-section">
+      <div id="myDIV" class="tabs_first">
+        <button class="btn"><a href="javascript:showtab('tab-1')"> STUDENT<br>STORIES</a></button>
+        <button class="btn active"><a href="javascript:showtab('tab-2')"> SOCIAL<br>MEDIA </a></button>
+        <button class="btn"><a href="javascript:showtab('tab-3')"> CONNECT<br>EMPLOYERS </a></button>
+        <button class="btn"><a href="javascript:showtab('tab-4')"> COMMERCIAL<br>AWARENESS </a></button>
+      </div>
+    <div id="tab-container"></div>
+    <div id="tab-1" style="visibility:hidden"> Dummy Content from First Tab </div>
+    <div id="tab-2" style="visibility:hidden"> Find content from Second tab </div>
+    <div id="tab-3" style="visibility:hidden"> Content from Third Tab will be placed here </div>
+    <div id="tab-4" style="visibility:hidden"> This is the fourth Tab </div>
   </div>
   <div class="home_fourth-section">
     <div class="home_fourth-section_social-media">
@@ -71,3 +82,43 @@
   </div>
 </div>
 <script src="bundle.js"></script>
+<script>
+  document.getElementById('tab-container').innerHTML = document.getElementById("tab-1").innerHTML;
+  function showtab(tabs)
+  {
+    const tab=tabs;
+    switch(tab) //this switch case replaces the tabContent
+      {
+        case "tab-1":
+          document.getElementById('tab-container').innerHTML = document.getElementById("tab-1").innerHTML;
+          break;
+        case "tab-2":
+      document.getElementById('tab-container').innerHTML = document.getElementById("tab-2").innerHTML;
+          break;
+        case "tab-3":
+      document.getElementById('tab-container').innerHTML = document.getElementById("tab-3").innerHTML;
+          break;
+        case "tab-4":
+      document.getElementById('tab-container').innerHTML = document.getElementById("tab-4").innerHTML;
+          break;
+        default:
+      document.getElementById('tab-container').innerHTML = document.getElementById("tab-1").innerHTML;
+          break;
+      }
+  }
+
+</script>
+<script>
+
+  const btnContainer = document.getElementById("myDIV");
+
+  const btns = btnContainer.getElementsByClassName("btn");
+
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
