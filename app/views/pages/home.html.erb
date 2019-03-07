@@ -65,24 +65,44 @@
   </div>
   <div class="home_seventh-section">
     <!-- Tab content -->
-    <div id="London" class="tabcontent">
-      <h3>London</h3>
-      <p>London is the capital city of England.</p>
+    <div id="first" class="tabcontent" style="display: block">
+      <div class="tabs_second_first-tab">
+        <div class="tabs_second_first-tab_left">
+          <h3>For Students</h3>
+          <h6>Learn.Adapt.Achieve</h6>
+          <p>Are you ready to be part of the largest student careers social platform? Gaining access to exclusive video careers content from students sharing tips,tricks and hacks to securing your dream internship! We’re a social platform, find all our content on...</p>
+          <div class="tabs_second_first-tab_left_social-media">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+        <div class="tabs_second_first-tab_right">
+          <%= image_tag 'https://images.pexels.com/photos/1110355/pexels-photo-1110355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' %>
+        </div>
+      </div>
     </div>
 
-    <div id="Paris" class="tabcontent">
-      <h3>Paris</h3>
-      <p>Paris is the capital of France.</p>
+    <div id="second" class="tabcontent">
+      <div class="tabs_second_second-tab">
+        <div class="tabs_second_second-tab_left">
+          <h3>For Employers</h3>
+          <h6>Get personal with students.</h6>
+          <p>Work with us to help you tell personal stories about your brand and connect with students in our network on a personal level. To find out how Student Inspire Network can help you connect with a Gen Z Audience fill in the form below to get in touch!</p>
+          <span>Get in Touch</span>
+        </div>
+        <div class="tabs_second_second-tab_right">
+          <%= image_tag 'https://images.pexels.com/photos/1162540/pexels-photo-1162540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' %>
+        </div>
+      </div>
     </div>
 
-    <div id="Tokyo" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
-    </div>
     </div>
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">FOR STUDENTS</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">FOR EMPLOYERS</button>
+      <button class="tablinks" onclick="openCity(event, 'first')">FOR STUDENTS</button>
+      <button class="tablinks" id="anothertab" onclick="openCity(event, 'second')">FOR EMPLOYERS</button>
     </div>
   <div class="home_eigth-section">
   </div>
@@ -130,7 +150,6 @@
     </div>
   </div>
 </div>
-<script src="bundle.js"></script>
 <script>
   document.getElementById('tab-container').innerHTML = document.getElementById("tab-1").innerHTML;
   function showtab(tabs)
@@ -171,7 +190,7 @@
   }
 </script>
 <script>
-  function openCity(evt, cityName) {
+  function openCity(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -188,7 +207,7 @@
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
 </script>

@@ -21,6 +21,136 @@
   }
 
   &_second {
+
+    &_first-tab {
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      &_left {
+        width: 50%;
+
+        & h3 {
+          font-family: $main-font;
+          font-size: 40px;
+        }
+
+        & h6 {
+          font-family: $main-font;
+          font-weight: 400;
+          letter-spacing: 1px;
+          color: $dark-gray;
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+
+        & p {
+          font-family: $main-font;
+          font-weight: 300;
+          color: $dark-gray;
+          font-size: 16px;
+          line-height: 25px;
+        }
+
+        &_social-media {
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+
+          & i {
+            @include absCenter;
+            font-size: 28px;
+            color: white;
+            height: 60px;
+            width: 60px;
+            background-color: #878787;
+            margin: 10px 20px;
+            border-radius: 50%;
+
+            &:hover {
+              background-color: $main-color;
+            }
+          }
+        }
+      }
+
+      &_right {
+
+        & img {
+          border-radius: 50%;
+          height: 300px;
+          width: 300px;
+        }
+      }
+
+    }
+
+    &_second-tab {
+      background-color: $main-color;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      &_left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+
+        & h3 {
+          font-family: $main-font;
+          font-size: 40px;
+          color: white;
+          margin-bottom: 0;
+        }
+
+        & h6 {
+          font-family: $main-font;
+          font-weight: 400;
+          letter-spacing: 1px;
+          color: white;
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+
+        & p {
+          font-family: $main-font;
+          font-weight: 300;
+          color: white;
+          font-size: 16px;
+          line-height: 25px;
+        }
+
+        & span {
+          margin: 20px 0;
+          padding: 10px 50px;
+          background-color: white;
+          color: $main-color;
+          font-family: $main-font;
+          font-weight: 400;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            background-color: #F9F9F9;
+            color: $main-color-dark;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &_right {
+
+        & img {
+          border-radius: 50%;
+          height: 300px;
+          width: 300px;
+        }
+      }
+    }
   }
 }
 
@@ -67,8 +197,10 @@
 
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: $light-gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -80,22 +212,32 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  width: 100%;
+  color: black;
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+// .tab button:hover {
+//   background-color: $light-gray;
+// }
 
 /* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
+// .tab button.active {
+//   background-color: $main-color;
+// }
+
+.tablinks {
+  font-family: $main-font;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
+  // padding: 40px;
   border-top: none;
+}
+
+#anothertab {
+  background-color: $main-color;
+  color: white;
 }
