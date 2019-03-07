@@ -168,9 +168,9 @@
   }
 
   &_seventh-section {
-    background-color: $light-gray;
-    height: 500px;
     width: 100%;
+    background-color: $light-gray;
+    height: 600px;
   }
 
   &_eigth-section {
@@ -180,6 +180,7 @@
 
   &_ninth-section {
     @include absCenterColumn
+    overflow: hidden;
 
     & h4 {
       text-align: center;
@@ -189,20 +190,82 @@
     }
 
     &_logos {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      margin-bottom: 100px;
 
       & img {
-        height: 30px;
+        height: 80px;
       }
 
-      & img:nth-child(5) {
-        height: 80px;
+      &_jp img {
+        height: 150px;
       }
     }
   }
 }
 
+
+* { box-sizing: border-box; }
+$duration: 50s;
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  background-color: white;
+  padding-left: 100%;
+  box-sizing: content-box;
+
+  .ticker {
+
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: ticker;
+           animation-name: ticker;
+    -webkit-animation-duration: $duration;
+            animation-duration: $duration;
+
+    &__item {
+      display: inline-block;
+      padding: 0 450px;
+      font-size: 2rem;
+      color: white;
+
+    }
+
+  }
+
+}

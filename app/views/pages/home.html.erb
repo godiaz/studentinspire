@@ -6,12 +6,12 @@
     <!-- CONTENT MISSING-->
   </div>
   <div class="home_third-section">
-      <div id="myDIV" class="tabs_first">
-        <button class="btn"><a href="javascript:showtab('tab-1')"> STUDENT<br>STORIES</a></button>
-        <button class="btn active"><a href="javascript:showtab('tab-2')"> SOCIAL<br>MEDIA </a></button>
-        <button class="btn"><a href="javascript:showtab('tab-3')"> CONNECT<br>EMPLOYERS </a></button>
-        <button class="btn"><a href="javascript:showtab('tab-4')"> COMMERCIAL<br>AWARENESS </a></button>
-      </div>
+    <div id="myDIV" class="tabs_first">
+      <button class="btn"><a href="javascript:showtab('tab-1')"> STUDENT<br>STORIES</a></button>
+      <button class="btn active"><a href="javascript:showtab('tab-2')"> SOCIAL<br>MEDIA </a></button>
+      <button class="btn"><a href="javascript:showtab('tab-3')"> CONNECT<br>EMPLOYERS </a></button>
+      <button class="btn"><a href="javascript:showtab('tab-4')"> COMMERCIAL<br>AWARENESS </a></button>
+    </div>
     <div id="tab-container"></div>
     <div id="tab-1" style="visibility:hidden"> Dummy Content from First Tab </div>
     <div id="tab-2" style="visibility:hidden"> Find content from Second tab </div>
@@ -64,20 +64,69 @@
     </div>
   </div>
   <div class="home_seventh-section">
+    <!-- Tab content -->
+    <div id="London" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
 
-  </div>
+    <div id="Paris" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    </div>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')">FOR STUDENTS</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">FOR EMPLOYERS</button>
+    </div>
   <div class="home_eigth-section">
-
   </div>
   <div class="home_ninth-section">
     <h4>ADVICE FROM STUDENTS AT</h4>
-    <div class="home_ninth-section_logos">
-      <%= image_tag 'google-logo.png' %>
-      <%= image_tag 'airbnb-logo.png' %>
-      <%= image_tag 'londonstock-logo.png' %>
-      <%= image_tag 'kleiner-logo.png' %>
-      <%= image_tag 'jpmorgan-logo.png' %>
-      <%= image_tag 'goldman-logo.png' %>
+    <div class="home_ninth-section_logos ticker-wrap">
+      <div class="ticker">
+        <div class="ticker__item">
+          <%= image_tag 'google-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'airbnb-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'londonstock-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'kleiner-logo.png' %>
+        </div>
+        <div class="ticker__item home_ninth-section_logos_jp">
+          <%= image_tag 'jpmorgan-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'goldman-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'google-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'airbnb-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'londonstock-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'kleiner-logo.png' %>
+        </div>
+        <div class="ticker__item home_ninth-section_logos_jp">
+          <%= image_tag 'jpmorgan-logo.png' %>
+        </div>
+        <div class="ticker__item">
+          <%= image_tag 'goldman-logo.png' %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -106,7 +155,6 @@
           break;
       }
   }
-
 </script>
 <script>
 
@@ -120,5 +168,27 @@
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active";
     });
+  }
+</script>
+<script>
+  function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
   }
 </script>
