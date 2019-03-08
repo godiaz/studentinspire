@@ -1,0 +1,54 @@
+.employers {
+  display: flex;
+
+  &_left {
+    height: 100vh;
+    width: 30%;
+    background-color: $main-color;
+    @include absCenterColumn;
+    color: white;
+
+    & i {
+      width: 80%;
+      font-size: 50px;
+      text-align: left;
+      color: $main-color-verydark;
+      margin-bottom: 10px;
+    }
+
+    & p {
+      font-family: $main-font;
+      font-weight: 500;
+      font-size: 20px;
+      width: 80%;
+      line-height: 30px;
+    }
+
+    & img {
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      margin: 40px 0 20px 0;
+    }
+
+    & h5 {
+      font-family: $main-font;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: -5px;
+    }
+
+    & h6 {
+      font-family: $main-font;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &_right {
+    height: 100vh;
+    width: 70%;
+    background-color: white;
+  }
+}

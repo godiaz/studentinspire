@@ -1,0 +1,15 @@
+.student-influencers{
+  display: flex;
+
+  &_left {
+    height: 100vh;
+    width: 30%;
+    background-color: $main-color;
+  }
+
+  &_right {
+    height: 100vh;
+    width: 70%;
+    background-color: white;
+  }
+}

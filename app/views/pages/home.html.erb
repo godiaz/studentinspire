@@ -1,6 +1,8 @@
 <div class="home">
   <div class="home_first-section">
-    <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/ac_none,q_35/v1552054035/first-video.mp4',autoplay: :autoplay, loop: :loop, autobuffer: :autobuffer, fallback_content: "Your browser does not support HTML5 video tags." %>
+    <div class="home_first-section_video">
+      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/ac_none/v1552054035/first-video.mp4',autoplay: :autoplay, loop: :loop, autobuffer: :autobuffer, fallback_content: "Your browser does not support HTML5 video tags." %>
+    </div>
     <div class="home_first-section_content">
       <h6>The social career network <br>made for students</h6>
       <p>Make sense of careers and watch students <br> at... Google</p>
@@ -73,7 +75,7 @@
       <button>SUBMIT</button>
     </div>
   </div>
-  <div class="home_seventh-section">
+  <div class="home_seventh-section" id="audience">
     <!-- Tab content -->
     <div id="first" class="tabcontent" style="display: block">
       <div class="tabs_second_first-tab">
@@ -101,7 +103,9 @@
           <h3>For Employers</h3>
           <h6>Get personal with students.</h6>
           <p>Work with us to help you tell personal stories about your brand and connect with students in our network on a personal level. To find out how Student Inspire Network can help you connect with a Gen Z Audience fill in the form below to get in touch!</p>
-          <span>Get in Touch</span>
+          <%= link_to employers_path do %>
+            <span>Get in Touch</span>
+          <% end %>
         </div>
         <div class="tabs_second_second-tab_right">
           <%= image_tag 'foremployers.png' %>
@@ -114,7 +118,7 @@
       <button class="tablinks" onclick="openCity(event, 'first')">FOR STUDENTS</button>
       <button class="tablinks" id="anothertab" onclick="openCity(event, 'second')">FOR EMPLOYERS</button>
     </div>
-  <div class="home_eigth-section">
+  <div class="home_eigth-section" id="student_stories">
     <div class="home_eigth-section_videos">
       <div class="video-card">
          <a href="https://www.youtube.com/watch?v=G2XkNxVe4Y0" target="_blank">

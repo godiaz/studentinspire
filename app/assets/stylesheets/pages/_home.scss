@@ -3,17 +3,24 @@
 
   // VIDEO IN THE BEGINNING OF THE PAGE
   &_first-section {
-    height: 70vh;
+    height: 700px;
     width: 100%;
     background-size: cover;
     background-color: $gray;
+    overflow: hidden;
 
-    & video {
-      height: auto;
-      width: 100%;
-      position: absolute;
-      z-index: 500;
-      background-size: contain;
+    &_video {
+      overflow: hidden;
+
+      & video {
+        height: auto !important;
+        max-width: 100%;
+        width: 100% !important;
+        position: absolute;
+        z-index: 500;
+        background-size: contain;
+        overflow: hidden;
+      }
     }
 
     &_content {
@@ -81,11 +88,13 @@
   // ABOUT PART WITH ANOTHER VIDEO
   &_second-section {
     background-color: white;
-    height: 900px;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     padding: 100px;
     @include absCenterColumn;
+    position: relative;
+    z-index: 850;
 
     & h6 {
       font-family: $main-font;
@@ -307,13 +316,21 @@
 
     &_videos {
       padding: 150px 40px 40px 40px;
-      @include absCenter;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
+      align-content: flex-start !important;
     }
 
     &_more-videos {
+      padding: 10px 40px;
       width: 100%;
-      @include absCenter;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
     }
 

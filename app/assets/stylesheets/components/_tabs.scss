@@ -125,7 +125,7 @@
           line-height: 25px;
         }
 
-        & span {
+        & a {
           margin: 20px 0;
           padding: 10px 50px;
           background-color: white;
@@ -138,6 +138,7 @@
             background-color: #F9F9F9;
             color: $main-color-dark;
             cursor: pointer;
+            text-decoration: none;
           }
 
           &:active {
