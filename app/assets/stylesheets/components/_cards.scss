@@ -1,0 +1,70 @@
+.video-card {
+  border-radius: 5px;
+  box-shadow:
+    0 0 0 0.5px rgba(3,42,60,.2),
+    0 0 0 1px rgba(3,42,60,.1),
+    0 14px 28px rgba(3,42,60,.25),
+    0 10px 10px rgba(3,42,60,.22);
+  -webkit-transition: -webkit-box-shadow .15s ease-in-out;
+  transition: -webkit-box-shadow .15s ease-in-out;
+  transition: box-shadow .15s ease-in-out;
+  transition: box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  height: 310px;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+
+  & a {
+    &:hover, &:visited, &:active {
+      text-decoration: none;
+    }
+  }
+
+  &_image img {
+    height: 240px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &_content {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $light-gray;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+
+    & p {
+      font-family: $main-font;
+      font-size: 13px;
+      color: black;
+      margin: 0;
+    }
+
+    & span {
+      font-family: $main-font;
+      font-size: 14px;
+      color: white;
+      margin: 0;
+      padding: 10px 50px;
+      border-radius: 3px;
+      background-color: $main-color;
+      box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+
+      &:hover {
+        background-color: $main-color-dark;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow:
+    0 0 0 0.5px rgba(3,42,60,.2), 0 0 0 1px rgba(3,42,60,.1), 0 19px 38px rgba(3,42,60,.3), 0 15px 12px rgba(3,42,60,.22);
+    -webkit-transition: -webkit-box-shadow .15s ease-in-out;
+    text-decoration: none !important;
+  }
+}

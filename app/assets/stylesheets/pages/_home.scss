@@ -3,25 +3,102 @@
 
   // VIDEO IN THE BEGINNING OF THE PAGE
   &_first-section {
-    height: 600px;
+    height: 70vh;
     width: 100%;
     background-size: cover;
-    background-color: $light-gray;
+    background-color: $gray;
 
     & video {
       height: auto;
       width: 100%;
-      position: relative;
+      position: absolute;
       z-index: 500;
+      background-size: contain;
+    }
+
+    &_content {
+      height: 700px;
+      width: 100%;
+      position: absolute;
+      z-index: 800;
+      // background-color: rgba(0,0,0,0.4);
+      padding: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+
+      & h6 {
+        width: 100%;
+        font-family: $main-font;
+        font-size: 40px;
+        font-weight: 400;
+        color: white;
+        text-align: left;
+        // margin-top: 30px;
+      }
+
+      & p {
+        width: 100%;
+        font-family: $main-font;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+        text-align: left;
+      }
+
+      & span {
+        @include absCenter;
+        margin: 20px 0 0 0;
+        background-color: $main-color;
+        color: white;
+        font-family: $main-font;
+        font-weight: 300;
+        font-size: 18px;
+        width: 200px;
+        height: 50px;
+        border-radius: 3px;
+        box-shadow: 0 0 5px 3px rgba(0,0,0, 0.3);
+
+        & i {
+          margin-left: 30px;
+        }
+
+        &:hover {
+          background-color: $main-color-dark;
+        }
+
+        &:active {
+          background-color: $main-color-dark;
+          position: relative;
+          top: 2px;
+          box-shadow: 0 0 3px 3px rgba(0,0,0, 0.3);
+        }
+      }
     }
   }
 
   // ABOUT PART WITH ANOTHER VIDEO
   &_second-section {
     background-color: white;
-    height: 800px;
+    height: 900px;
     width: 100%;
     background-size: cover;
+    padding: 100px;
+    @include absCenterColumn;
+
+    & h6 {
+      font-family: $main-font;
+      font-size: 20px;
+      color: $main-color;
+      text-align: left;
+    }
+
+    &_video {
+      height: 600px;
+      width: 100%;
+      background-color: gray;
+    }
   }
 
   // WHERE SOCIAL MEDIA AND COUNT UP IS
@@ -225,8 +302,41 @@
   }
 
   &_eigth-section {
-    height: 800px;
     width: 100%;
+    @include absCenterColumn;
+
+    &_videos {
+      padding: 150px 40px 40px 40px;
+      @include absCenter;
+      flex-wrap: wrap;
+    }
+
+    &_more-videos {
+      width: 100%;
+      @include absCenter;
+      flex-wrap: wrap;
+    }
+
+    &_button {
+      font-family: $main-font;
+      color: white;
+      font-weight: 300;
+      padding: 15px 150px;
+      background-color: $main-color;
+      border-radius: 3px;
+      box-shadow: 0 3px 3px 0px rgba(0,0,0,0.3);
+      margin: 50px 0;
+
+      &:hover {
+        background-color: $main-color-dark;
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
+        background-color: $main-color-dark;
+      }
+    }
   }
 
   &_ninth-section {
@@ -253,70 +363,3 @@
   }
 }
 
-
-* { box-sizing: border-box; }
-$duration: 90s;
-
-@-webkit-keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-@keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-.ticker-wrap {
-  width: 100%;
-  overflow: hidden;
-  height: 200px;
-  background-color: white;
-  padding-left: 100%;
-  box-sizing: content-box;
-
-  .ticker {
-
-    display: inline-block;
-    height: 4rem;
-    line-height: 4rem;
-    white-space: nowrap;
-    padding-right: 100%;
-    box-sizing: content-box;
-
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-   -webkit-animation-name: ticker;
-           animation-name: ticker;
-    -webkit-animation-duration: $duration;
-            animation-duration: $duration;
-
-    &__item {
-      display: inline-block;
-      padding: 0 200px;
-      font-size: 2rem;
-      color: white;
-
-    }
-
-  }
-
-}
