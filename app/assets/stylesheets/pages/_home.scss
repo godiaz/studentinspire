@@ -3,15 +3,22 @@
 
   // VIDEO IN THE BEGINNING OF THE PAGE
   &_first-section {
-    background-image: url('https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     height: 600px;
     width: 100%;
     background-size: cover;
+    background-color: $light-gray;
+
+    & video {
+      height: auto;
+      width: 100%;
+      position: relative;
+      z-index: 500;
+    }
   }
 
   // ABOUT PART WITH ANOTHER VIDEO
   &_second-section {
-    background-image: url('https://images.pexels.com/photos/1181397/pexels-photo-1181397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-color: white;
     height: 800px;
     width: 100%;
     background-size: cover;
@@ -155,15 +162,59 @@
 
   &_sixth-section {
     height: 900px;
-    @include absCenterColumn
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
     &_one img {
       @include absCenter
-      width: 800px;
+      width: 1000px;
       height: 500px;
     }
 
     &_two {
+
+      & p {
+        font-family: $main-font;
+        color: $main-color;
+        font-size: 19px;
+        font-weight: 300;
+      }
+
+      & input {
+        width: 75%;
+        height: 50px;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+
+      & button {
+        border: 0;
+        background-color: $main-color;
+        color: white;
+        font-family: $main-font;
+        font-weight: 300;
+        padding: 13px 60px;
+        box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          background-color: $main-color-dark;
+        }
+
+        &:active {
+          position: relative;
+          top: 1px;
+          background-color: $main-color-dark;
+          box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        &:focus {
+          outline: 0;
+        }
+      }
 
     }
   }

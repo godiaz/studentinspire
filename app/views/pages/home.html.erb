@@ -1,8 +1,8 @@
 <div class="home">
   <div class="home_first-section">
-    <!-- CONTENT MISSING-->
+    <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/ac_none,q_21/v1552042859/intro-video.mp4',autoplay: :autoplay, loop: :loop, autobuffer: :autobuffer, fallback_content: "Your browser does not support HTML5 video tags." %>
   </div>
-  <div class="home_second-section">
+  <div class="home_second-section" id="about">
     <!-- CONTENT MISSING-->
   </div>
   <div class="home_third-section">
@@ -45,7 +45,7 @@
   </div>
   <div class="home_fifth-section">
     <div class="home_fifth-section_one">
-      <%= image_tag 'https://images.pexels.com/photos/814822/pexels-photo-814822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' %>
+      <%= image_tag 'emilia-avatar.png' %>
     </div>
     <div class="home_fifth-section_two">
       <i class="fas fa-quote-left"></i>
@@ -57,10 +57,12 @@
   </div>
   <div class="home_sixth-section">
     <div class="home_sixth-section_one">
-      <%=  image_tag 'https://images.pexels.com/photos/1181233/pexels-photo-1181233.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' %>
+      <%=  image_tag 'picture-banner.png' %>
     </div>
     <div class="home_sixth-section_two">
-
+      <p>Join our newsletter and get our weekly commercial awareness video directly to your inbox</p>
+      <input type="Email Address">
+      <button>SUBMIT</button>
     </div>
   </div>
   <div class="home_seventh-section">
@@ -80,7 +82,7 @@
           </div>
         </div>
         <div class="tabs_second_first-tab_right">
-          <%= image_tag 'https://images.pexels.com/photos/1110355/pexels-photo-1110355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' %>
+          <%= image_tag 'forstudents.png' %>
         </div>
       </div>
     </div>
@@ -94,7 +96,7 @@
           <span>Get in Touch</span>
         </div>
         <div class="tabs_second_second-tab_right">
-          <%= image_tag 'https://images.pexels.com/photos/1162540/pexels-photo-1162540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' %>
+          <%= image_tag 'foremployers.png' %>
         </div>
       </div>
     </div>
