@@ -2,11 +2,14 @@
   display: flex;
 
   &_left {
-    height: 100vh;
+    padding-top: 50px;
+    height: 110vh;
     width: 30%;
     background-color: $main-color;
     @include absCenterColumn;
     color: white;
+    position: sticky;
+      top: 0;
 
     & i {
       width: 80%;
@@ -47,8 +50,30 @@
   }
 
   &_right {
-    height: 100vh;
+    height: 110vh;
     width: 70%;
     background-color: white;
+    @include absCenterColumn;
+
+    & h2 {
+      font-family: $main-font;
+      font-weight: bolder;
+      color: black;
+      margin-bottom: 40px;
+    }
+
+    & p {
+      font-family: $main-font;
+      font-weight: lighter;
+      color: $dark-gray;
+      font-size: 14px;
+      width: 70%;
+      text-align: justify;
+      line-height: 20px;
+    }
+
+    &_alert {
+      color: #B22B22 !important;
+    }
   }
 }

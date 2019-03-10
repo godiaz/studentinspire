@@ -1,0 +1,22 @@
+
+<div class="employers">
+  <div class="employers_left">
+    <i class="fas fa-quote-left"></i>
+    <p>Better than organic quality users at a phenomenal CPI. Fanbytes simply delivers.</p>
+    <%= image_tag 'https://images.pexels.com/photos/1310522/pexels-photo-1310522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %>
+    <h5>John Wagner</h5>
+    <h6>Senior Recruiter & Growth Strategist</h6>
+  </div>
+  <div class="employers_right">
+    <h2>Employer Form</h2>
+    <p>Welcome to the employer sign up form, please fill in details and send us a detailed message about the type of candidates you are looking (skills, degrees, age, experience, etc.) We will do our best to respond to your query in the next 24hours. Thank you for your time and attention.</p>
+    <%= simple_form_for @employer do |f| %>
+      <%= f.input :company_name %>
+      <%= f.input :contact_name %>
+      <%= f.input :email %>
+      <%= f.input :message %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+
+</div>

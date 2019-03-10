@@ -87,8 +87,8 @@
 
   // ABOUT PART WITH ANOTHER VIDEO
   &_second-section {
-    background-color: white;
-    height: 100vh;
+    background-color: $light-gray;
+    height: 800px;
     width: 100%;
     background-size: cover;
     padding: 100px;
@@ -104,9 +104,19 @@
     }
 
     &_video {
+      @include absCenter;
       height: 600px;
       width: 100%;
-      background-color: gray;
+      overflow: hidden;
+
+      & video {
+        height: 600px !important;
+        width: 800px !important;
+        position: absolute;
+        z-index: 500;
+        background-size: contain;
+        overflow: hidden;
+      }
     }
   }
 
@@ -316,8 +326,10 @@
 
     &_videos {
       padding: 150px 40px 40px 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
@@ -327,8 +339,10 @@
     &_more-videos {
       padding: 10px 40px;
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
@@ -352,6 +366,10 @@
         position: relative;
         top: 1px;
         background-color: $main-color-dark;
+      }
+
+      &:focus {
+        outline: 0;
       }
     }
   }

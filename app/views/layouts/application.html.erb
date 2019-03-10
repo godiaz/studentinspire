@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Student Inspire</title>
+    <title>Student Inspire Network</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= favicon_link_tag 'favicon.png' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+    <% flash.each do |type, message| %>
+      <div class="alert <%= bootstrap_class_for(type) %> alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= message %>
+      </div>
+    <% end %>
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
@@ -17,3 +24,5 @@
     <%= render 'shared/footer' %>
   </body>
 </html>
+
+

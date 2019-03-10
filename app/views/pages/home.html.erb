@@ -12,7 +12,7 @@
   <div class="home_second-section" id="about">
     <h6>ABOUT</h6>
     <div class="home_second-section_video">
-
+      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/q_30/v1552246263/Student_Inspire_Netwtok_-_preview.mp4',controls: :controls, fallback_content: "Your browser does not support HTML5 video tags." %>
     </div>
   </div>
   <div class="home_third-section">
@@ -103,7 +103,7 @@
           <h3>For Employers</h3>
           <h6>Get personal with students.</h6>
           <p>Work with us to help you tell personal stories about your brand and connect with students in our network on a personal level. To find out how Student Inspire Network can help you connect with a Gen Z Audience fill in the form below to get in touch!</p>
-          <%= link_to employers_path do %>
+          <%= link_to new_employer_path do %>
             <span>Get in Touch</span>
           <% end %>
         </div>
