@@ -71,8 +71,11 @@
     </div>
     <div class="home_sixth-section_two">
       <p>Join our newsletter and get our weekly commercial awareness video directly to your inbox</p>
-      <input type="Email Address">
-      <button>SUBMIT</button>
+      <form action="/subscribe" method="post" id="mailing-list">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input type="email" name="email">
+        <button>SUBMIT</button>
+      </form>
     </div>
   </div>
   <div class="home_seventh-section" id="audience">

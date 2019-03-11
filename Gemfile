@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.0'
 gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
+gem 'gibbon'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
