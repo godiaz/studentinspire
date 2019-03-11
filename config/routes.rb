@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   get 'student_influencers', to: 'pages#student_influencers', as: :student_influencers
+  post 'subscribe', to: 'pages#subscribe'
   # get 'employers', to: 'pages#employers', as: :employers
 
   resources :student_influencers
