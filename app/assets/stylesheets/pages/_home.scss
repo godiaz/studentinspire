@@ -33,7 +33,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-content: center;
+      align-content: center !important;
 
       & h6 {
         width: 100%;
@@ -41,7 +41,7 @@
         font-size: 40px;
         font-weight: 400;
         color: white;
-        text-align: left;
+        text-align: center;
         // margin-top: 30px;
       }
 
@@ -51,43 +51,50 @@
         font-size: 18px;
         font-weight: 300;
         color: white;
-        text-align: left;
+        text-align: center;
       }
 
-      & span {
-        @include absCenter;
-        margin: 20px 0 0 0;
-        background-color: $main-color;
-        color: white;
-        font-family: $main-font;
-        font-weight: 300;
-        font-size: 18px;
-        width: 200px;
-        height: 50px;
-        border-radius: 3px;
-        box-shadow: 0 0 5px 3px rgba(0,0,0, 0.3);
-
-        & i {
-          margin-left: 30px;
-        }
-
-        &:hover {
-          background-color: $main-color-dark;
-        }
-
-        &:active {
-          background-color: $main-color-dark;
-          position: relative;
-          top: 2px;
-          box-shadow: 0 0 3px 3px rgba(0,0,0, 0.3);
-        }
+      & i {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 50px;
+        color: $main-color;
       }
+
+      // & span {
+      //   @include absCenter;
+      //   margin: 20px 0 0 0;
+      //   background-color: $main-color;
+      //   color: white;
+      //   font-family: $main-font;
+      //   font-weight: 300;
+      //   font-size: 18px;
+      //   width: 200px;
+      //   height: 50px;
+      //   border-radius: 3px;
+      //   box-shadow: 0 0 5px 3px rgba(0,0,0, 0.3);
+
+      //   & i {
+      //     margin-left: 30px;
+      //   }
+
+      //   &:hover {
+      //     background-color: $main-color-dark;
+      //   }
+
+      //   &:active {
+      //     background-color: $main-color-dark;
+      //     position: relative;
+      //     top: 2px;
+      //     box-shadow: 0 0 3px 3px rgba(0,0,0, 0.3);
+      //   }
+      // }
     }
   }
 
   // ABOUT PART WITH ANOTHER VIDEO
   &_second-section {
-    background-color: $light-gray;
+    background-color: white;
     height: 800px;
     width: 100%;
     background-size: cover;
@@ -101,12 +108,14 @@
       font-size: 20px;
       color: $main-color;
       text-align: left;
+      width: 80%;
     }
 
     &_video {
+      background-color: $light-gray;
       @include absCenter;
       height: 600px;
-      width: 100%;
+      width: 800px;
       overflow: hidden;
 
       & video {

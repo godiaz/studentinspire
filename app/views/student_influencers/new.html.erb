@@ -1,10 +1,11 @@
 <div class="student-influencers">
   <div class="student-influencers_left">
     <i class="fas fa-quote-left"></i>
-    <p>Better than organic quality users at a phenomenal CPI. Fanbytes simply delivers.</p>
-    <%= image_tag 'https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' %>
-    <h5>John Wagner</h5>
-    <h6>Senior Recruiter</h6>
+    <p>It was a fantastic experience which taught me a lot about myself and other people; upon reflection, the role was a key stepping stone to other managerial positions.
+</p>
+    <%= image_tag 'picforform2.png' %>
+    <h5>Tobi Bakare</h5>
+    <h6>Work: PwC, Barclays, KPMG</h6>
   </div>
   <div class="student-influencers_right">
     <h2>Student Influencer Sign Up Form</h2>
@@ -14,6 +15,51 @@
       videos/opportunities/posts for every member of the network. We also ask these questions to better understand our network and how to support them, regardless of their background.
     </p>
     <p class="student-influencers_right_alert">* Required</p>
+    <%= simple_form_for @student_influencer do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email %>
+      <%= f.input :phone_number %>
+      <%= f.input :language_spoken, collection: @languages %>
+      <%= f.input :degree_subject %>
+      <%= f.input :university, collection: @universities %>
+      <%= f.input :industrial_placement %>
+      <%= f.input :reason_to_be_ambassador %>
+      <%= f.input :social_media, as: :check_boxes, collection: @social_media %>
+      <%= f.input :current_university_year, collection: @university_year %>
+      <%= f.input :home_postcode %>
+      <%= f.input :can_work_in_uk %>
+      <%= f.input :gender, collection: @genders %>
+      <%= f.input :ethnicity, collection: @ethnicity%>
+      <%= f.input :school_or_college_type, collection: @school_type %>
+      <%= f.input :free_school_meals, collection: [ 'Yes', 'No', 'Prefer not to say'] %>
+      <%= f.input :sexuality, collection: @sexuality %>
+      <%= f.input :parents_university_attendance, collection: [ 'Yes', 'No', 'Prefer not to say'] %>
+      <%= f.input :disabled_or_handicap, collection: [ 'Yes', 'No', 'Prefer not to say'] %>
+      <%= f.input :mailing_list %>
+      <%= f.button :submit %>
+    <% end %>
   </div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
