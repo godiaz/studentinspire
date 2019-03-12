@@ -21,7 +21,6 @@ class StudentInfluencersController < ApplicationController
           gibbon.lists('9c817c7a14').members.create(body: { email_address: @student_influencer.email, status: 'subscribed', merge_fields: { FNAME: @student_influencer.first_name, LNAME: @student_influencer.last_name, PHONE: @student_influencer.phone_number } })
           flash[:notice] = "Form succesfully submitted"
         rescue Gibbon::MailChimpError => e
-          puts e.message
           case e.title
           when 'Member Exists'
             flash[:error] = 'You are already subscribed to the mailing list'
