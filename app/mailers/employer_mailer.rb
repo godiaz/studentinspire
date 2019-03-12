@@ -8,6 +8,6 @@ class EmployerMailer < ApplicationMailer
   def new_employer(employer)
     @employer = employer
 
-    mail to: "to@example.org", subject: 'New employer signed up' #This needs to be client's email!!!!!
+    mail to: "mils@studentinspirenetwork.com", subject: 'New employer signed up'
   end
 end
