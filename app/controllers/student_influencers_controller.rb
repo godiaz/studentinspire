@@ -15,7 +15,23 @@ class StudentInfluencersController < ApplicationController
   def create        # POST
     @student_influencer = StudentInfluencer.new(student_influencer_params)
     if @student_influencer.save
-      flash[:notice] = "Form succesfully submitted"
+      if @student_influencer.mailing_list
+        begin
+          gibbon = Gibbon::Request.new
+          gibbon.lists('9c817c7a14').members.create(body: { email_address: @student_influencer.email, status: 'subscribed', merge_fields: { FNAME: @student_influencer.first_name, LNAME: @student_influencer.last_name, PHONE: @student_influencer.phone_number } })
+          flash[:notice] = "Form succesfully submitted"
+        rescue Gibbon::MailChimpError => e
+          puts e.message
+          case e.title
+          when 'Member Exists'
+            flash[:error] = 'You are already subscribed to the mailing list'
+          else
+            flash[:error] = 'There was a problem subscribing you to the mailing list'
+          end
+        end
+      else
+        flash[:notice] = "Form succesfully submitted"
+      end
       redirect_to root_path
     else
       flash[:error] = "Please resend the form"
