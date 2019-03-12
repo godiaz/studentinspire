@@ -1,3 +1,7 @@
+.form-group {
+  margin: 20px 0 !important;
+}
+
 .employers {
   display: flex;
 
@@ -74,6 +78,28 @@
 
     &_alert {
       color: #B22B22 !important;
+    }
+
+    & form {
+
+      & input {
+        width: 50vw !important;
+      }
+
+      & label {
+        font-size: 14px;
+      }
+
+      & input.btn {
+        color: white;
+        background-color: $main-color !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+        &:hover {
+          background-color: $main-color-dark !important;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, .6) !important;
+        }
+      }
     }
   }
 }
