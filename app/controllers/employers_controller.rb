@@ -14,6 +14,7 @@ class EmployersController < ApplicationController
     @employer = Employer.new(employer_params)
     if @employer.save
       flash[:notice] = "Form succesfully submitted"
+      EmployerMailer.new_employer(@employer).deliver_now
       redirect_to root_path
     else
       flash[:error] = "Please resend the form"

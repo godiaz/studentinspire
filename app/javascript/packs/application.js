@@ -2,11 +2,13 @@ import "bootstrap";
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
 
-import countUpModule from 'countup.js'
+import * as countUpModule from 'countup.js'
 
-const countUp = new CountUp('target', 5234);
-if (!countUp.error) {
-  countUp.start();
-} else {
-  console.error(countUp.error);
+window.onload = () => {
+  const countUp = new countUpModule.CountUp('countup-target', 673231, {
+    duration: 5,
+    suffix: '+'
+  })
+  countUp.start()å
 }
+
