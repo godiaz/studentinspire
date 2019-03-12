@@ -1,3 +1,8 @@
+.form-check-input {
+  margin: 10px !important;
+}
+
+
 .student-influencers {
   display: flex;
 
@@ -50,7 +55,7 @@
   }
 
   &_right {
-    height: 300vh;
+    height: 350vh;
     width: 70%;
     background-color: white;
     @include absCenterColumn;
@@ -67,13 +72,35 @@
       font-weight: lighter;
       color: $dark-gray;
       font-size: 14px;
-      width: 70%;
+      width: 50vw;
       text-align: justify;
       line-height: 20px;
     }
 
     &_alert {
       color: #B22B22 !important;
+    }
+
+    & form {
+
+      & input {
+        // width: 50vw !important;
+      }
+
+      & label {
+        font-size: 14px;
+      }
+
+      & input.btn {
+        color: white;
+        background-color: $main-color !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+        &:hover {
+          background-color: $main-color-dark !important;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, .6) !important;
+        }
+      }
     }
   }
 }
