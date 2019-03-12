@@ -16,6 +16,8 @@ class StudentInfluencersController < ApplicationController
     @student_influencer = StudentInfluencer.new(student_influencer_params)
     if @student_influencer.save
       flash[:notice] = "Form succesfully submitted"
+      if @student_influencer.mailing_list
+      end
       redirect_to root_path
     else
       flash[:error] = "Please resend the form"
