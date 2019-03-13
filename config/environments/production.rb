@@ -70,7 +70,8 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.delivery_method     = :postmark
-  config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
+  # config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
+  config.action_mailer.smtp_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
   config.action_mailer.default_url_options = { host: "yourapp.herokuapp.com" } # Needs setting when  domain is set up
   config.action_mailer.perform_deliveries = false # remove when above has been set up
 
