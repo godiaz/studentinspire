@@ -3,23 +3,23 @@
 
   // VIDEO IN THE BEGINNING OF THE PAGE
   &_first-section {
-    height: 700px;
+    height: 50vh;
     width: 100%;
     background-size: cover;
-    background-color: $gray;
-    overflow: hidden;
+    background-color: gray;
+    // overflow: hidden;
 
     &_video {
-      overflow: hidden;
+      // overflow: hidden;
+      width: 100vw;
 
       & video {
         height: auto !important;
-        max-width: 100%;
-        width: 100% !important;
+        width: 100vw  !important;
         position: absolute;
         z-index: 500;
         background-size: contain;
-        overflow: hidden;
+        // overflow: hidden;
       }
     }
 
@@ -100,8 +100,8 @@
     background-size: cover;
     padding: 100px;
     @include absCenterColumn;
-    position: relative;
-    z-index: 850;
+    // position: relative;
+    // z-index: 850;
 
     & h6 {
       font-family: $main-font;
@@ -112,21 +112,24 @@
     }
 
     &_video {
-      background-color: $light-gray;
       @include absCenter;
-      height: 600px;
-      width: 800px;
       overflow: hidden;
+      margin: 10px 0;
 
       & video {
+        background-color: black;
         height: 600px !important;
         width: 800px !important;
-        position: absolute;
-        z-index: 500;
         background-size: contain;
         overflow: hidden;
       }
     }
+  }
+
+  &_third-section {
+    width: 100%;
+    height: 600px;
+    background-color: $main-color-dark;
   }
 
   // WHERE SOCIAL MEDIA AND COUNT UP IS
@@ -332,6 +335,7 @@
   &_eigth-section {
     width: 100%;
     @include absCenterColumn;
+    background-color: white;
 
     &_videos {
       padding: 150px 40px 40px 40px;
@@ -384,8 +388,10 @@
   }
 
   &_ninth-section {
+    margin-top: 50px !important;
     @include absCenterColumn
     overflow: hidden;
+    background-color: white;
 
     & h4 {
       text-align: center;
@@ -405,5 +411,442 @@
       }
     }
   }
+}
+
+
+@media only screen and (max-width: 880px)  {
+
+  .home {
+
+    // VIDEO IN THE BEGINNING OF THE PAGE
+    &_first-section {
+      height: 350px;
+      width: 100%;
+      background-size: cover;
+      background-color: $gray;
+      overflow: hidden;
+
+      &_video {
+        overflow: hidden;
+
+        & video {
+          height: auto !important;
+          max-width: 100%;
+          width: 100% !important;
+          position: absolute;
+            top: 10%;
+          z-index: 500;
+          background-size: contain;
+          overflow: hidden;
+        }
+      }
+
+      &_content {
+        height: 400px;
+        width: 100%;
+        position: absolute;
+        z-index: 800;
+        // background-color: rgba(0,0,0,0.4);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: flex-end !important;
+        @include absCenter
+
+        & h6 {
+          width: 340px;
+          font-family: $main-font;
+          font-size: 22px;
+          font-weight: 400;
+          color: white;
+          text-align: center;
+          // margin-top: 30px;
+        }
+
+        & p {
+          width: 290px;
+          font-family: $main-font;
+          font-size: 14px;
+          font-weight: 300;
+          color: white;
+          text-align: center;
+        }
+
+        & i {
+          margin-top: 10px;
+          text-align: center;
+          font-size: 30px;
+          color: $main-color;
+        }
+
+        // & span {
+        //   @include absCenter;
+        //   margin: 20px 0 0 0;
+        //   background-color: $main-color;
+        //   color: white;
+        //   font-family: $main-font;
+        //   font-weight: 300;
+        //   font-size: 18px;
+        //   width: 200px;
+        //   height: 50px;
+        //   border-radius: 3px;
+        //   box-shadow: 0 0 5px 3px rgba(0,0,0, 0.3);
+
+        //   & i {
+        //     margin-left: 30px;
+        //   }
+
+        //   &:hover {
+        //     background-color: $main-color-dark;
+        //   }
+
+        //   &:active {
+        //     background-color: $main-color-dark;
+        //     position: relative;
+        //     top: 2px;
+        //     box-shadow: 0 0 3px 3px rgba(0,0,0, 0.3);
+        //   }
+        // }
+      }
+    }
+
+    // ABOUT PART WITH ANOTHER VIDEO
+    &_second-section {
+      background-color: white;
+      height: 400px;
+      width: 100%;
+      background-size: cover;
+      padding: 100px;
+      @include absCenterColumn;
+      position: relative;
+      z-index: 850;
+
+      & h6 {
+        font-family: $main-font;
+        font-size: 20px;
+        color: $main-color;
+        text-align: center;
+        width: 100%;
+      }
+
+      &_video {
+        @include absCenter;
+        overflow: hidden;
+
+        & video {
+          background-color: black;
+          height: 200px !important;
+          width: 300px !important;
+          background-size: contain;
+          overflow: hidden;
+        }
+      }
+    }
+
+    &_third-section {
+      width: 100%;
+      height: 600px;
+      background-color: $main-color-dark;
+    }
+
+    // WHERE SOCIAL MEDIA AND COUNT UP IS
+    &_fourth-section {
+
+      &_social-media {
+        padding: 0 20px;
+        height: 100px;
+        width: 100%;
+        @include absCenter;
+
+        & i {
+          font-size: 22px;
+          @include absCenter;
+          color: white;
+          height: 50px;
+          width: 50px;
+          background-color: #878787;
+          margin: 10px;
+          border-radius: 50%;
+
+          &:hover {
+            background-color: $main-color;
+          }
+        }
+      }
+
+      &_content {
+        display: flex;
+        justify-content: center;
+
+        &_one {
+          width: 280px;
+
+          & h4 {
+            color: $main-color;
+            font-family: $main-font;
+            font-size: 18px !important;
+          }
+
+          & p {
+            font-size: 14px;
+            color: #A0A0A0;
+            line-height: 20px;
+          }
+        }
+
+        &_two {
+
+          &_counter {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            & i {
+              font-size: 60px;
+              margin: 0 10px;
+              color: $main-color;
+            }
+
+            & p {
+              margin-bottom: 0;
+              font-size: 45px;
+              font-weight: bold;
+            }
+          }
+
+          &_text {
+            font-size: 16px;
+            width: 300px;
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &_bottom-text {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        height: 150px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        font-weight: lighter;
+        color: $dark-gray;
+
+        & p {
+          width: 70%;
+        }
+      }
+    }
+
+    // WHERE THE TESTIMONIAL IS
+    &_fifth-section {
+      height: 550px;
+      width: 100%;
+      background-color: $light-gray;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+
+      &_one {
+
+        & img {
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          margin-top: 10px;
+          margin-bottom: -75px;
+        }
+      }
+
+      &_two {
+
+        & i {
+          font-size: 30px;
+          color: #EDEDED;
+          margin: 0 30px 20px 0;
+        }
+
+        & p {
+          font-family: $main-font;
+          font-size: 12px;
+          font-weight: lighter;
+          color: $dark-gray;
+          width: 280px;
+          margin-left: 20px;
+          text-align: justift;
+        }
+
+        & h6 {
+          font-family: $main-font;
+          font-weight: bolder;
+          font-size: 20px;
+          margin-top: 20px;
+          margin-left: 0px;
+          text-align: center;
+        }
+      }
+    }
+
+    &_sixth-section {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      &_one img {
+        @include absCenter
+        width: 300px;
+        height: 150px;
+      }
+
+      &_two {
+        padding: 10px 20px;
+        @include absCenterColumn;
+
+        & p {
+          width: 100%;
+          font-family: $main-font;
+          color: $main-color;
+          font-size: 12px;
+          font-weight: 300;
+          text-align: center;
+        }
+
+        & form {
+          @include absCenter;
+        }
+
+        & input {
+          width: 60%;
+          height: 43px;
+          border: 1px solid #DDD;
+
+          &:focus {
+            outline: 0;
+          }
+        }
+
+        & button {
+          border: 0;
+          font-size: 12px;
+          background-color: $main-color;
+          color: white;
+          font-family: $main-font;
+          font-weight: 300;
+          padding: 13px 20px;
+          box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            background-color: $main-color-dark;
+          }
+
+          &:active {
+            position: relative;
+            top: 1px;
+            background-color: $main-color-dark;
+            box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.2);
+          }
+
+          &:focus {
+            outline: 0;
+          }
+        }
+
+      }
+    }
+
+    &_seventh-section {
+      width: 100%;
+      background-color: $light-gray;
+    }
+
+    &_eigth-section {
+      width: 100%;
+      @include absCenterColumn;
+      background-color: white;
+
+      &_videos {
+        padding: 150px 40px 40px 40px;
+        display: flex;
+        flex-wrap: wrap;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-start !important;
+      }
+
+      &_more-videos {
+        padding: 10px 40px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      &_button {
+        font-family: $main-font;
+        color: white;
+        font-weight: 300;
+        padding: 15px 150px;
+        background-color: $main-color;
+        border-radius: 3px;
+        box-shadow: 0 3px 3px 0px rgba(0,0,0,0.3);
+        margin: 50px 0;
+
+        &:hover {
+          background-color: $main-color-dark;
+        }
+
+        &:active {
+          position: relative;
+          top: 1px;
+          background-color: $main-color-dark;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+
+    &_ninth-section {
+      margin-top: 50px !important;
+      @include absCenterColumn
+      overflow: hidden;
+      background-color: white;
+
+      & h4 {
+        text-align: center;
+        font-family: $main-font;
+        color: $main-color;
+        font-size: 20px;
+      }
+
+      &_logos {
+
+        & img {
+          height: 50px;
+        }
+
+        &_jp img {
+          height: 100px;
+        }
+      }
+    }
+  }
+
+
 }
 

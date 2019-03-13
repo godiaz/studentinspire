@@ -103,3 +103,115 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 880px)  {
+
+  .form-group {
+    margin: 20px 0 !important;
+  }
+
+  .employers {
+    display: flex;
+
+    &_left {
+      padding-top: 50px;
+      height: 110vh;
+      width: 0%;
+      background-color: $main-color;
+      @include absCenterColumn;
+      color: white;
+      position: sticky;
+        top: 0;
+
+      & i {
+        width: 80%;
+        font-size: 50px;
+        text-align: left;
+        color: $main-color-verydark;
+        margin-bottom: 10px;
+      }
+
+      & p {
+        font-family: $main-font;
+        font-weight: 500;
+        font-size: 20px;
+        width: 80%;
+        line-height: 30px;
+      }
+
+      & img {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        margin: 40px 0 20px 0;
+      }
+
+      & h5 {
+        font-family: $main-font;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: -5px;
+      }
+
+      & h6 {
+        font-family: $main-font;
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+    }
+
+    &_right {
+      height: 110vh;
+      width: 98%;
+      background-color: white;
+      @include absCenterColumn;
+
+      & h2 {
+        font-family: $main-font;
+        font-weight: bolder;
+        color: black;
+        margin-bottom: 40px;
+        font-size: 35px;
+      }
+
+      & p {
+        font-family: $main-font;
+        font-weight: lighter;
+        color: $dark-gray;
+        font-size: 14px;
+        width: 80%;
+        text-align: justify;
+        line-height: 20px;
+      }
+
+      &_alert {
+        color: #B22B22 !important;
+      }
+
+      & form {
+
+        & input {
+          width: 80vw !important;
+        }
+
+        & label {
+          font-size: 14px;
+        }
+
+        & input.btn {
+          color: white;
+          background-color: $main-color !important;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+          &:hover {
+            background-color: $main-color-dark !important;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .6) !important;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -9,6 +9,6 @@ window.onload = () => {
     duration: 5,
     suffix: '+'
   })
-  countUp.start()å
+  countUp.start()
 }
 

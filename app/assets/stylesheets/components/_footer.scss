@@ -108,3 +108,121 @@
        }
     }
 }
+
+@media only screen and (max-width: 880px)  {
+
+  .footer {
+      width: 100%;
+      // height: 360px;
+      background-color: #FAFAFA;
+
+
+      &_social-media {
+        padding: 0 20px;
+        height: 100px;
+        width: 100%;
+        @include absCenter;
+
+        & i {
+          font-size: 22px;
+          @include absCenter;
+          color: white;
+          height: 50px;
+          width: 50px;
+          background-color: #878787;
+          margin: 10px;
+          border-radius: 50%;
+
+          &:hover {
+            background-color: $main-color;
+          }
+        }
+      }
+
+      &_content {
+        padding: 0 20px;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_one {
+          & img {
+            height: 80px;
+            width: 120px;
+            margin-bottom: 10px;
+          }
+          & p {
+            font-family: $main-font;
+            font-size: 12px;
+            color: $dark-gray;
+            width: 200px;
+            line-height: 20px;
+          }
+        }
+
+        &_two {
+          & h4 {
+            font-family: $main-font;
+            font-size: 20px;
+            color: $dark-gray;
+            text-align: right;
+            font-weight: 600;
+          }
+
+          & p {
+            font-family: $main-font;
+            font-size: 12px;
+            color: $dark-gray;
+            text-align: right;
+            font-weight: 300;
+          }
+        }
+      }
+
+      &_legal {
+        padding: 0 20px;
+        width: 100%;
+        height: 110px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        font-weight: lighter;
+
+        &_one {
+          display: flex;
+          font-size: 12px;
+          color: $dark-gray;
+
+          & p {
+            padding: 0 10px;
+          }
+        }
+
+        &_two {
+          font-size: 13px;
+          color: $dark-gray;
+        }
+      }
+
+      &_hoxton {
+        height: 30px;
+        font-size: 12px;
+        background-color: $dark-gray;
+        color: #DDD;
+        @include absCenter;
+
+         & p {
+          margin: 0;
+          font-weight: 300;
+         }
+
+         & a {
+          color: white;
+         }
+      }
+  }
+
+}
