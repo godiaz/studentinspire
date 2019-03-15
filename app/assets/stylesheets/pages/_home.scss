@@ -3,32 +3,32 @@
 
   // VIDEO IN THE BEGINNING OF THE PAGE
   &_first-section {
-    height: 50vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
-    background-color: gray;
-    // overflow: hidden;
+    background-color: white;
+    overflow: hidden;
 
     &_video {
-      // overflow: hidden;
+      overflow: hidden;
       width: 100vw;
 
       & video {
         height: auto !important;
+        max-height: 100vh;
         width: 100vw  !important;
         position: absolute;
         z-index: 500;
         background-size: contain;
-        // overflow: hidden;
+        overflow: hidden;
       }
     }
 
     &_content {
-      height: 700px;
+      height: 100%;
       width: 100%;
       position: absolute;
       z-index: 800;
-      // background-color: rgba(0,0,0,0.4);
       padding: 100px;
       display: flex;
       flex-direction: column;
@@ -95,13 +95,11 @@
   // ABOUT PART WITH ANOTHER VIDEO
   &_second-section {
     background-color: white;
-    height: 800px;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     padding: 100px;
     @include absCenterColumn;
-    // position: relative;
-    // z-index: 850;
 
     & h6 {
       font-family: $main-font;
@@ -117,10 +115,10 @@
       margin: 10px 0;
 
       & video {
-        background-color: black;
-        height: 600px !important;
-        width: 800px !important;
-        background-size: contain;
+        background-color: gray;
+        height: auto !important;
+        width: 850px !important;
+        // background-size: cover;
         overflow: hidden;
       }
     }
@@ -420,21 +418,21 @@
 
     // VIDEO IN THE BEGINNING OF THE PAGE
     &_first-section {
-      height: 350px;
+      height: 25vh;
       width: 100%;
       background-size: cover;
-      background-color: $gray;
+      background-color: white;
       overflow: hidden;
 
       &_video {
         overflow: hidden;
+        width: 100vw;
 
         & video {
           height: auto !important;
-          max-width: 100%;
-          width: 100% !important;
+          max-height: 100vh;
+          width: 100vw  !important;
           position: absolute;
-            top: 10%;
           z-index: 500;
           background-size: contain;
           overflow: hidden;
@@ -442,22 +440,20 @@
       }
 
       &_content {
-        height: 400px;
+        height: 300px;
         width: 100%;
         position: absolute;
         z-index: 800;
-        // background-color: rgba(0,0,0,0.4);
-        padding: 10px;
+        padding: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-content: flex-end !important;
-        @include absCenter
+        align-content: center !important;
 
         & h6 {
-          width: 340px;
+          width: 100%;
           font-family: $main-font;
-          font-size: 22px;
+          font-size: 20px;
           font-weight: 400;
           color: white;
           text-align: center;
@@ -465,18 +461,18 @@
         }
 
         & p {
-          width: 290px;
+          width: 100%;
           font-family: $main-font;
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 300;
           color: white;
           text-align: center;
         }
 
         & i {
-          margin-top: 10px;
+          margin-top: 0px;
           text-align: center;
-          font-size: 30px;
+          font-size: 20px;
           color: $main-color;
         }
 
@@ -514,17 +510,15 @@
     // ABOUT PART WITH ANOTHER VIDEO
     &_second-section {
       background-color: white;
-      height: 400px;
+      height: 80vh;
       width: 100%;
       background-size: cover;
       padding: 100px;
       @include absCenterColumn;
-      position: relative;
-      z-index: 850;
 
       & h6 {
         font-family: $main-font;
-        font-size: 20px;
+        font-size: 16px;
         color: $main-color;
         text-align: center;
         width: 100%;
@@ -533,11 +527,12 @@
       &_video {
         @include absCenter;
         overflow: hidden;
+        margin: 10px 0;
 
         & video {
           background-color: black;
           height: 200px !important;
-          width: 300px !important;
+          width: 350px !important;
           background-size: contain;
           overflow: hidden;
         }

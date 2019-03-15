@@ -1,7 +1,7 @@
 <div class="home">
   <div class="home_first-section">
     <div class="home_first-section_video">
-      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/ac_none/v1552054035/first-video.mp4',autoplay: :autoplay, loop: :loop, autobuffer: :autobuffer, fallback_content: "Your browser does not support HTML5 video tags." %>
+      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/ac_none/v1552054035/first-video.mp4',autoplay: :true, loop: :loop, autobuffer: :true, fallback_content: "Your browser does not support HTML5 video tags." %>
     </div>
     <div class="home_first-section_content">
       <h6>The social career network <br>made for students</h6>
@@ -13,7 +13,7 @@
   <div class="home_second-section" id="about">
     <h6>ABOUT</h6>
     <div class="home_second-section_video">
-      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/q_30/v1552246263/Student_Inspire_Netwtok_-_preview.mp4',controls: :controls, fallback_content: "Your browser does not support HTML5 video tags." %>
+      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/q_30/v1552246263/Student_Inspire_Netwtok_-_preview.mp4',controls: :true, autoplay: false, autobuffer: :autobuffer, fallback_content: "Your browser does not support HTML5 video tags." %>
     </div>
   </div>
   <div class="home_third-section">
