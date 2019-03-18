@@ -1,50 +1,35 @@
 <div class="home">
   <div class="home_first-section">
     <div class="home_first-section_video">
-      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/ac_none/v1552054035/first-video.mp4',autoplay: :true, loop: :true, fallback_content: "Your browser does not support HTML5 video tags." %>
+      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/ac_none/v1552054035/first-video.mp4', autoplay: :true, loop: :true, fallback_content: "Your browser does not support HTML5 video tags.", muted: true %>
     </div>
     <div class="home_first-section_content">
-      <h6>The social career network <br>made for students</h6>
-      <p>Make sense of careers and watch students <br> at... Google</p>
+      <h6>THE SOCIAL MEDIA CAREER NETWORK <br>MADE FOR STUDENTS</h6>
+        <p>Make sense of careers and watch students <br>at... <span id="banner-typed-text"></span></p>
+
       <a href="#about" onclick="smoothScroll('about');"><i class="fas fa-angle-down arrow bounce"></i></a>
       <!-- <span>Get Started <i class="fas fa-long-arrow-alt-right"></i></span> -->
     </div>
   </div>
   <div class="home_second-section" id="about">
-    <h6>ABOUT</h6>
-    <div class="home_second-section_video">
-      <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/q_30/v1552246263/Student_Inspire_Netwtok_-_preview.mp4',controls: :true, autoplay: false, fallback_content: "Your browser does not support HTML5 video tags." %>
+    <div class="container">
+      <h6>ABOUT</h6>
+      <div class="hom-section-text-holder" style="text-align: justify; margin-bottom: 50px;">
+        <p>Student Inspire Network is a Gen Z led social careers network focused on preparing young people for the world of work. When we realised students weren’t engaging with careers, we sought to equip them with the tools required to tackle career issues on social platforms they use daily. As a founding team of Gen Z’ers, our vision is to be catalysts for change in the careers space - changing the way students access, engage and retain careers information.
+        </p>
+        <p> We tell authentic stories.
+        The video content we produce tells the stories of students who have been through the process and secured experience at top firms, allowing you to truly connect and be inspired by people you can relate to.
+        </p>
+        <p>We’re built on social.
+        Our network spans across Facebook, YouTube, Instagram, Twitter & LinkedIn serving you with easily accessible careers information on platforms you use everyday.</p>
+        <p>We are building a community of students focused and engaged in building their careers. In short, the first ever social careers organisation that integrates careers information within student culture.</p>
+      </div>
+      <div class="home_second-section_video">
+        <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/q_30/v1552246263/Student_Inspire_Netwtok_-_preview.mp4',controls: :true, autoplay: false, fallback_content: "Your browser does not support HTML5 video tags.", width: "100%" %>
+      </div>
     </div>
   </div>
-  <div class="home_third-section">
 
-    <div class="tabs">
-      <button class="4-tablinks" onclick="openTab(event, 'one')">STUDENT<br>STORIES</button>
-      <button class="4-tablinks" onclick="openTab(event, 'two')">SOCIAL<br>MEDIA</button>
-      <button class="4-tablinks" onclick="openTab(event, 'three')">CONNECT<br>EMPLOYERS</button>
-      <button class="4-tablinks" onclick="openTab(event, 'four')">COMMERCIAL<br>AWARENESS</button>
-    </div>
-
-    <!-- Tab content -->
-    <div id="one" class="tabcontents" style="display: block">
-      <p>one</p>
-    </div>
-
-    <div id="two" class="tabcontents">
-      <p>two</p>
-    </div>
-
-    <div id="three" class="tabcontents">
-      <p>three</p>
-    </div>
-
-    <div id="four" class="tabcontents">
-      <p>four</p>
-    </div>
-
-    </div>
-
-  </div>
   <div class="home_fourth-section">
     <div class="home_fourth-section_social-media">
       <i class="fab fa-facebook-f"></i>

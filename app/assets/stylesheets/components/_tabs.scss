@@ -1,3 +1,28 @@
+.tab-holder-left {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.inner-tab-info {
+  background-color: white;
+}
+
+.inner-tab-button {
+  height: calc(calc(100vh - 153px) / 3);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+
+
+
+
+
 .tabs {
 
   &_first {
@@ -205,7 +230,7 @@
 
 .tabs button {
   font-family: $main-font;
-  font-weight: 300;
+  font-weight: 600;
   background-color: #54A7DF;
   float: left;
   border: none;

@@ -55,10 +55,13 @@
   }
 
   &_right {
+    padding-top: 15vh;
     height: 350vh;
     width: 70%;
     background-color: white;
-    @include absCenterColumn;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     & h2 {
       font-family: $main-font;
