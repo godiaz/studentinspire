@@ -1,22 +1,38 @@
 <div class="navbar-hoxton">
   <!-- Logo -->
-  <a href="/" class="navbar-hoxton-brand white-logo">
-    <%= image_tag 'logo.png', alt: "Student Inspire Network Logo" %>
-  </a>
+  <% if controller_name == "pages" && controller_name == "home" %>
+    <a href="/" class="navbar-hoxton-brand white-logo">
+      <%= image_tag 'logo.png', alt: "Student Inspire Network Logo" %>
+    </a>
+  <% else %>
+    <a href="/" class="navbar-hoxton-brand white-logo">
+      <%= image_tag 'dark-logo.png', alt: "Student Inspire Network Logo" %>
+    </a>
+  <% end %>
 
   <a href="/" class="navbar-hoxton-brand gray-logo">
     <%= image_tag 'dark-logo.png', alt: "Student Inspire Network Logo" %>
   </a>
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <% if controller_name == "pages" && controller_name == "home" %>
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <%= link_to 'About', '#about', class: "navbar-hoxton-item navbar-hoxton-link" %>
+      <%= link_to 'Audience', '#audience', class: "navbar-hoxton-item navbar-hoxton-link" %>
+      <%= link_to 'Student Stories', '#student_stories', class: "navbar-hoxton-item navbar-hoxton-link" %>
+      <%= link_to 'Student Influencers', new_student_influencer_path, class: "navbar-button" %>
+    </div>
+  <% else %>
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <%= link_to 'About', '#about', class: "navbar-hoxton-item navbar-hoxton-grey-link" %>
+      <%= link_to 'Audience', '#audience', class: "navbar-hoxton-item navbar-hoxton-grey-link" %>
+      <%= link_to 'Student Stories', '#student_stories', class: "navbar-hoxton-item navbar-hoxton-grey-link" %>
+      <%= link_to 'Student Influencers', new_student_influencer_path, class: "navbar-button" %>
+    </div>
+  <% end %>
 
-    <%= link_to 'About', '#about', class: "navbar-hoxton-item navbar-hoxton-link" %>
-    <%= link_to 'Audience', '#audience', class: "navbar-hoxton-item navbar-hoxton-link" %>
-    <%= link_to 'Student Stories', '#student_stories', class: "navbar-hoxton-item navbar-hoxton-link" %>
-    <%= link_to 'Student Influencers', new_student_influencer_path, class: "navbar-button" %>
 
-  </div>
+
 
   <!-- Dropdown appearing on mobile only -->
   <div class="navbar-hoxton-item hidden-md hidden-lg">
