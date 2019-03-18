@@ -12,3 +12,5 @@ window.onload = () => {
   countUp.start()
 }
 
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
