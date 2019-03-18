@@ -1,0 +1,94 @@
+
+@mixin bold-center {
+  text-align: center;
+  padding: 40px 10px;
+  @include for-tablet-portrait-up {
+    font-size: 42px;
+    padding: 40px 50px;
+  }
+  @include for-desktop-up {
+    font-size: 52px;
+    padding: 40px 80px;
+  }
+  @include for-big-desktop-up {
+    font-size: 64px;
+    padding: 40px 120px;
+  }
+}
+
+.employer-header-holder {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employer-header-text {
+  @include bold-center
+  font-size: 32px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.employers-body-section {
+  padding: 0px 10px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  h3 {
+    font-weight: bold;
+    color: #c2c2c2;
+  }
+  p {
+    line-height: 36px;
+  }
+  @include for-tablet-portrait-up {
+      padding: 0px 30px;
+    }
+    @include for-desktop-up {
+      padding: 0px 60px;
+    }
+    @include for-big-desktop-up {
+      padding: 0px 90px;
+    }
+}
+
+.stats {
+  text-align: center;
+  h1 {
+    font-weight: bold;
+  }
+  p {
+    color: #c2c2c2;
+  }
+}
+
+.slim {
+  margin-top: 20px;
+  width: 300px;
+  font-size: 32px;
+  border-radius: 4px !important;
+}
+
+.mt60 {
+  margin-top: 60px;
+}
+
+.employers-bottom-banner {
+  padding-top: 60px !important;
+  margin-top: 40px;
+  background-color: $blue;
+  padding-bottom: 85px !important;
+  @include bold-center
+  color: white !important;
+  line-height: 45px;
+  h1 {
+    font-weight: bold;
+  }
+  p {
+    font-size: 24px;
+    @include for-tablet-portrait-up {
+      font-size: 32px;
+    }
+  }
+}
+
