@@ -3,7 +3,7 @@
 
 // Define fonts for body and headers
 $body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Noto Sans", "sans-serif";
+$headers-font: "Open Sans", "Helvetica", "sans-serif";
 $main-font: 'Noto Sans JP', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
@@ -28,3 +28,21 @@ $main-font: 'Noto Sans JP', sans-serif;
   justify-content: center;
   flex-direction: column;
 }
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+// usage

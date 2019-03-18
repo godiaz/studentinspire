@@ -10,10 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_12_102304) do
+ActiveRecord::Schema.define(version: 2019_03_18_151903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "case_studies", force: :cascade do |t|
+  end
 
   create_table "employers", force: :cascade do |t|
     t.string "company_name"

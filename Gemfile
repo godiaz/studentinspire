@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'postmark-rails'
+gem 'hotloader'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
