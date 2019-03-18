@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .employer-header-text {
@@ -73,6 +74,10 @@
   margin-top: 60px;
 }
 
+.center {
+  @include absCenter
+}
+
 .employers-bottom-banner {
   padding-top: 60px !important;
   margin-top: 40px;
@@ -85,10 +90,16 @@
     font-weight: bold;
   }
   p {
+    max-width: 970px;
     font-size: 24px;
     @include for-tablet-portrait-up {
       font-size: 32px;
     }
   }
+}
+
+.employer-logo {
+  margin-top: 50px;
+  width: 250px;
 }
 
