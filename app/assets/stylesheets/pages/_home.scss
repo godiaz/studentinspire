@@ -3,24 +3,20 @@
 
   // VIDEO IN THE BEGINNING OF THE PAGE
   &_first-section {
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    width: 100vw;
     background-size: cover;
-    background-color: white;
+    background-color: gray;
     overflow: hidden;
 
     &_video {
-      overflow: hidden;
-      width: 100vw;
 
       & video {
-        height: auto !important;
-        max-height: 100vh;
-        width: 100vw  !important;
+        min-height: 100vh;
+        min-width: 100vw;
         position: absolute;
         z-index: 500;
         background-size: contain;
-        overflow: hidden;
       }
     }
 
@@ -97,6 +93,8 @@
     background-color: white;
     height: 100vh;
     width: 100%;
+    position:relative;
+    z-index: 600;
     background-size: cover;
     padding: 100px;
     @include absCenterColumn;
@@ -126,7 +124,7 @@
 
   &_third-section {
     width: 100%;
-    height: 600px;
+    height: 1000px;
     background-color: $main-color-dark;
   }
 
@@ -429,9 +427,8 @@
         width: 100vw;
 
         & video {
-          height: auto !important;
-          max-height: 100vh;
-          width: 100vw  !important;
+          min-height: 100vh;
+          min-width: 100vw;
           position: absolute;
           z-index: 500;
           background-size: contain;
@@ -453,7 +450,7 @@
         & h6 {
           width: 100%;
           font-family: $main-font;
-          font-size: 20px;
+          font-size: 19px;
           font-weight: 400;
           color: white;
           text-align: center;
@@ -463,7 +460,7 @@
         & p {
           width: 100%;
           font-family: $main-font;
-          font-size: 13px;
+          font-size: 12px;
           font-weight: 300;
           color: white;
           text-align: center;
