@@ -12,6 +12,8 @@
     max-width: 976px;
   }
   margin-bottom: 50px;
+  box-shadow: 0 0 0 0.5px rgba(3, 42, 60, 0.2), 0 0 0 1px rgba(3, 42, 60, 0.1), 0 19px 38px rgba(3, 42, 60, 0.3), 0 15px 12px rgba(3, 42, 60, 0.22);
+  -webkit-transition: -webkit-box-shadow .15s ease-in-out;
 }
 
 .lhs-student {
@@ -80,13 +82,14 @@
   color: white;
 }
 .mini-headers {
-  color: #c2c2c2;
+  color: $main-color;
   font-weight: 600;
 }
 .mb30 {
   margin-bottom: 30px;
 }
 .vid-holder {
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -95,9 +98,18 @@
   margin-bottom: 50px;
 }
 .com-vid-holder {
-  margin: 10px 0px;
+  box-shadow: 0 0 0 0.5px rgba(3, 42, 60, 0.2), 0 0 0 1px rgba(3, 42, 60, 0.1), 0 19px 38px rgba(3, 42, 60, 0.3), 0 15px 12px rgba(3, 42, 60, 0.22);
+  -webkit-transition: -webkit-box-shadow .15s ease-in-out;
+  text-decoration: none !important;
+  margin: 10px 10px;
   background-color: white;
-  border-radius: 0px 0px 8px 8px;
+  &:hover {
+    box-shadow:
+    0 0 0 0.5px rgba(3,42,60,.2), 0 0 0 1px rgba(3,42,60,.1), 0 19px 38px rgba(3,42,60,.3), 0 15px 12px rgba(3,42,60,.22);
+    -webkit-transition: -webkit-box-shadow .15s ease-in-out;
+    text-decoration: none !important;
+  }
+  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
