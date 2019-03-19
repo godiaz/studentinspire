@@ -22,7 +22,8 @@
         </p>
       </div>
       <div class="about-video">
-        <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/q_30/v1552246263/Student_Inspire_Netwtok_-_preview.mp4',controls: :true, autoplay: false, fallback_content: "Your browser does not support HTML5 video tags.", width: "100%" %>
+        <%= cl_video_tag 'https://res.cloudinary.com/hoxton-digital/video/upload/q_30/v1552246263/Student_Inspire_Netwtok_-_preview.mp4',controls: :true, autoplay: false, fallback_content: "Your browser does not support HTML5 video tags.", width: "100%", id: "aboutVid" %>
+        <div id="vidCover" class="vidCover" style="background-image: url(<%= image_path "wave.png" %>)"></div>
       </div>
     </div>
   </div>
@@ -361,7 +362,14 @@
   }
 </script> -->
 <script>
-
+  var vidCover = document.getElementById("vidCover")
+  var aboutVid = document.getElementById("aboutVid")
+  console.log(vidCover)
+  console.log(aboutVid)
+  vidCover.addEventListener("click", function() {
+    vidCover.style.display = "none"
+    aboutVid.play()
+  });
 </script>
 <script>
   function openCity(evt, tabName) {

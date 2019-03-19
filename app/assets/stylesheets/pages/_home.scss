@@ -108,6 +108,7 @@
       font-size: 20px;
       color: $main-color;
       text-align: center;
+      margin-bottom: 40px;
     }
 
     &_video {
@@ -856,14 +857,27 @@
 }
 
 .about-video {
+  position: relative;
   width: 100%;
   @media (min-width: 1420px) {
     max-width: 605px;
     width: 50%;
   }
 }
+.vidCover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 100;
+  cursor: pointer;
+}
 .about-text {
-  padding: 20px;
+  padding: 0px 20px;
   width: 100%;
   text-align: center;
   @media (min-width: 1420px) {
