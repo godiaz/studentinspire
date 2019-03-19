@@ -104,6 +104,10 @@
   }
 }
 
+.employer-logo {
+  margin-top: 50px;
+  width: 40%;
+}
 
 @media only screen and (max-width: 880px)  {
 
@@ -215,3 +219,71 @@
   }
 
 }
+
+.employer-card-upper {
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employer-card-lower {
+  width: 100%;
+  padding: 20px;
+  p {
+    color: #c2c2c2;
+  }
+}
+
+.employer-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 0 0 0.5px rgba(3, 42, 60, 0.2), 0 0 0 1px rgba(3, 42, 60, 0.1), 0 14px 28px rgba(3, 42, 60, 0.25), 0 10px 10px rgba(3, 42, 60, 0.22);
+  transition: box-shadow .15s ease-in-out;
+  &:hover {
+    box-shadow:
+    0 0 0 0.5px rgba(3,42,60,.2), 0 0 0 1px rgba(3,42,60,.1), 0 19px 38px rgba(3,42,60,.3), 0 15px 12px rgba(3,42,60,.22);
+    -webkit-transition: -webkit-box-shadow .15s ease-in-out;
+    text-decoration: none !important;
+  }
+}
+
+.employer-card-logo {
+  margin-top: 10px;
+  width: 60%;
+}
+.employer-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.employer-partnership-header {
+  color: #c2c2c2;
+  @include header
+  font-weight: 600;
+  margin-top: 20vh;
+  margin-bottom: 60px;
+}
+
+.employer-card-lower-header {
+  font-weight: 600;
+}
+
+.pb60 {
+  padding-bottom: 60px;
+}
+
+
+

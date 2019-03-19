@@ -23,4 +23,10 @@ class PagesController < ApplicationController
   def capgemini
   end
 
+  def employers
+  end
+
+  def student_stories
+  end
+
 end

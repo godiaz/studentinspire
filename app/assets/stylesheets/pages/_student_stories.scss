@@ -1,0 +1,178 @@
+.student-holder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  // -webkit-box-shadow: 3px 6px 22px 10px rgba(227,227,227,1);
+  // -moz-box-shadow: 3px 6px 22px 10px rgba(227,227,227,1);
+  // box-shadow: 3px 6px 22px 10px rgba(227,227,227,1);
+  border-radius: 8px;
+  overflow: hidden;
+  @media (min-width: 976px) {
+    max-width: 976px;
+  }
+  margin-bottom: 50px;
+}
+
+.lhs-student {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @media (min-width: 976px) {
+    max-width: 976px;
+  }
+  @media (min-width: 764px) {
+    flex-direction: row;
+  }
+}
+
+.rhs-student {
+  width: 100%;
+  max-width: 976px;
+  background-color: white;
+}
+
+.student-image {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.student-info-cont {
+  flex: 1;
+  text-align: center;
+  @media (min-width: 764px) {
+    padding: 0px 40px;
+    text-align: left;
+  }
+  p {
+    color: #666;
+  }
+}
+
+.vido-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.middle-holder {
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+}
+.jcont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tips {
+  padding: 20px;
+}
+.tip {
+  margin-top: 10px;
+}
+.white  {
+  color: white;
+}
+.mini-headers {
+  color: #c2c2c2;
+  font-weight: 600;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.vid-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+  margin-bottom: 50px;
+}
+.com-vid-holder {
+  margin: 10px 0px;
+  background-color: white;
+  border-radius: 0px 0px 8px 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  h3 {
+    color: #c2c2c2;
+    font-weight: bold;
+    margin-top: 0px;
+    font-size: 14px;
+  }
+  p {
+    color: #666;
+    font-size: 12px;
+  }
+  @include for-tablet-landscape-up {
+    margin: 20px 20px;
+    width: 400px;
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  @include for-desktop-up {
+    width: 500px;
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  @include for-big-desktop-up {
+    width: 700px;
+    h3 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.comvids {
+  @include for-tablet-landscape-up {
+    width: 400px;
+    height: 264px;
+  }
+  @include for-desktop-up {
+    width: 500px;
+    height: 330px;
+  }
+  @include for-big-desktop-up {
+    width: 700px;
+    height: 462px;
+  }
+}
+
+.p10 {
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,19 @@
   }
 }
 
+@mixin header {
+  font-size: 36px;
+  @include for-tablet-portrait-up {
+    font-size: 42px;
+  }
+  @include for-desktop-up {
+    font-size: 52px;
+  }
+  @include for-big-desktop-up {
+    font-size: 64px;
+  }
+}
+
 .employer-header-holder {
   height: 60vh;
   display: flex;
@@ -27,7 +40,6 @@
 .employer-header-text {
   @include bold-center
   font-size: 32px;
-  text-align: center;
   font-weight: 600;
 }
 

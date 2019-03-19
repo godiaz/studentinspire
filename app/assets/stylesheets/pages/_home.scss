@@ -91,20 +91,23 @@
   // ABOUT PART WITH ANOTHER VIDEO
   &_second-section {
     background-color: white;
-    height: 100vh;
+    // height: 100vh;
     width: 100%;
     position:relative;
     z-index: 600;
     background-size: cover;
-    padding: 100px;
-    @include absCenterColumn;
+    padding: 10px;
+    flex-direction: column;
+    @media (min-width: 700px) {
+      padding: 100px;
+    }
+    // @include absCenterColumn;
 
     & h6 {
       font-family: $main-font;
       font-size: 20px;
       color: $main-color;
-      text-align: left;
-      width: 80%;
+      text-align: center;
     }
 
     &_video {
@@ -326,6 +329,7 @@
   &_seventh-section {
     width: 100%;
     background-color: $light-gray;
+    margin-bottom: 60px;
   }
 
   &_eigth-section {
@@ -334,7 +338,7 @@
     background-color: white;
 
     &_videos {
-      padding: 150px 40px 40px 40px;
+      padding: 0px 40px;
       display: flex;
       flex-wrap: wrap;
       // display: grid;
@@ -421,7 +425,6 @@
       background-size: cover;
       background-color: white;
       overflow: hidden;
-
       &_video {
         overflow: hidden;
         width: 100vw;
@@ -437,6 +440,7 @@
       }
 
       &_content {
+        margin-top: calc(50vh - 150px);
         height: 300px;
         width: 100%;
         position: absolute;
@@ -507,11 +511,10 @@
     // ABOUT PART WITH ANOTHER VIDEO
     &_second-section {
       background-color: white;
-      height: 80vh;
+      // height: 80vh;
       width: 100%;
       background-size: cover;
-      padding: 100px;
-      @include absCenterColumn;
+      // @include absCenterColumn;
 
       & h6 {
         font-family: $main-font;
@@ -538,7 +541,7 @@
 
     &_third-section {
       width: 100%;
-      height: calc(100vh - 75px);
+      // height: calc(100vh - 75px);
       background-color: $main-color-dark;
     }
 
@@ -764,7 +767,7 @@
       background-color: white;
 
       &_videos {
-        padding: 150px 40px 40px 40px;
+        padding: 0px 40px;
         display: flex;
         flex-wrap: wrap;
         // display: grid;
@@ -841,4 +844,46 @@
 
 
 }
+
+.about-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 1420px) {
+    flex-direction: row;
+  }
+}
+
+.about-video {
+  width: 100%;
+  @media (min-width: 1420px) {
+    max-width: 605px;
+    width: 50%;
+  }
+}
+.about-text {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  @media (min-width: 1420px) {
+    text-align: left;
+    max-width: 605px;
+    width: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

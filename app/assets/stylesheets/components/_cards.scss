@@ -9,11 +9,15 @@
   transition: -webkit-box-shadow .15s ease-in-out;
   transition: box-shadow .15s ease-in-out;
   transition: box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-  height: 310px;
+  // height: 310px;
   width: 480px;
   display: flex;
   flex-direction: column;
   margin: 40px;
+  @media (max-width: 500px) {
+    width: 95vw;
+    margin: 15px;
+  }
 
   & a {
     &:hover, &:visited, &:active {
@@ -22,7 +26,6 @@
   }
 
   &_image img {
-    height: 240px;
     width: 100%;
     background-size: cover;
     border-radius: 5px 5px 0 0;
@@ -43,6 +46,9 @@
       font-size: 13px;
       color: black;
       margin: 0;
+      @media (max-width: 500px) {
+        width: 60%;
+      }
     }
 
     & span {
@@ -54,7 +60,9 @@
       border-radius: 3px;
       background-color: $main-color;
       box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
-
+      @media (max-width: 500px) {
+        padding: 5px 20px;
+      }
       &:hover {
         background-color: $main-color-dark;
       }
