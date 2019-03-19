@@ -27,14 +27,23 @@
       </div>
     </div>
   </div>
-
   <div class="home_fourth-section">
     <div class="home_fourth-section_social-media">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-linkedin-in"></i>
-      <i class="fab fa-youtube"></i>
+      <a class="social-link" href="https://www.youtube.com/channel/UChKevFkejLt4borC0fiKJhA">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a class="social-link" href="https://www.facebook.com/StudentInspireNetwork/">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="social-link" href="https://twitter.com/student_inspire">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="social-link" href="https://www.instagram.com/student_inspire/">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="social-link" href="https://www.linkedin.com/company/thestudentinspirenetwork/">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
     </div>
     <div class="home_fourth-section_content">
       <div class="home_fourth-section_content_one hidden-xs hidden-sm">
@@ -53,6 +62,7 @@
       <p><i>Our network consists of thousands of micro influencers, student societies and pages on Facebook and Instagram, each of which have a highly-engaged community in a select career niche.</i></p>
     </div>
   </div>
+
   <div class="home_fifth-section">
     <div class="home_fifth-section_one">
       <%= image_tag 'emilia-avatar.png' %>
@@ -87,11 +97,21 @@
           <h6>Learn.Adapt.Achieve</h6>
           <p>Are you ready to be part of the largest student careers social platform? Gaining access to exclusive video careers content from students sharing tips,tricks and hacks to securing your dream internship! We’re a social platform, find all our content on...</p>
           <div class="tabs_second_first-tab_left_social-media">
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin-in"></i>
+            <a class="social-link" href="https://www.youtube.com/channel/UChKevFkejLt4borC0fiKJhA">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a class="social-link" href="https://www.facebook.com/StudentInspireNetwork/">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="social-link" href="https://twitter.com/student_inspire">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/student_inspire/">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/company/thestudentinspirenetwork/">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
         <div class="tabs_second_first-tab_right">
@@ -102,7 +122,7 @@
     <div id="second" class="tabcontent">
       <div class="tabs_second_second-tab">
         <div class="tabs_second_second-tab_left">
-          <h3>For Employers</h3>
+          <h3 style="color:white;">For Employers</h3>
           <h6>Get personal with students.</h6>
           <p>Work with us to help you tell personal stories about your brand and connect with students in our network on a personal level. To find out how Student Inspire Network can help you connect with a Gen Z Audience fill in the form below to get in touch!</p>
           <%= link_to new_employer_path do %>
@@ -115,8 +135,8 @@
       </div>
     </div>
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'first')">FOR STUDENTS</button>
-      <button class="tablinks" id="anothertab" onclick="openCity(event, 'second')">FOR EMPLOYERS</button>
+      <button class="tablinks" style="font-weight:600;" onclick="openCity(event, 'first')">FOR STUDENTS</button>
+      <button class="tablinks" style="font-weight:600;" id="anothertab" onclick="openCity(event, 'second')">FOR EMPLOYERS</button>
     </div>
   </div>
 

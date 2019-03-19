@@ -105,7 +105,8 @@
 
     & h6 {
       font-family: $main-font;
-      font-size: 20px;
+      font-size: 32px;
+      font-weight: 600;
       color: $main-color;
       text-align: center;
       margin-bottom: 40px;
@@ -331,6 +332,10 @@
     width: 100%;
     background-color: $light-gray;
     margin-bottom: 60px;
+    h3 {
+      font-weight:600;
+      color: $main-color;
+    }
   }
 
   &_eigth-section {
@@ -887,7 +892,11 @@
   }
 }
 
-
+.social-link {
+  &:hover {
+    text-decoration: none !important;
+  }
+}
 
 
 
