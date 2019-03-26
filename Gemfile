@@ -18,6 +18,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'postmark-rails'
+gem "activestorage", ">= 5.2.1.1"
+gem "actionview", ">= 5.2.2.1"
 
 
 group :development do
