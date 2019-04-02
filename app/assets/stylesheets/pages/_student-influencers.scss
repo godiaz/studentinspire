@@ -2,7 +2,6 @@
   margin: 10px !important;
 }
 
-
 .student-influencers {
   display: flex;
 
@@ -56,7 +55,8 @@
 
   &_right {
     padding-top: 15vh;
-    height: 350vh;
+    // height: 350vh;
+    margin-bottom: 100px;
     width: 70%;
     background-color: white;
     display: flex;
@@ -110,6 +110,23 @@
 
 
 @media only screen and (max-width: 880px)  {
+
+  .form-control {
+    width: 80vw;
+  }
+
+  .form-group {
+    width: 80vw;
+  }
+
+  .legend {
+
+  }
+
+  .form-check-label.boolean.optional {
+    font-size: 11px !important;
+    font-weight: normal;
+  }
 
   .form-check-input {
     margin: 10px !important;
@@ -168,7 +185,7 @@
     }
 
     &_right {
-      height: 420vh;
+      // height: 420vh;
       width: 100%;
       background-color: white;
       @include absCenterColumn;
@@ -178,7 +195,7 @@
         font-weight: bolder;
         color: black;
         margin-bottom: 20px;
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
       }
 
@@ -210,7 +227,8 @@
           color: white;
           background-color: $main-color !important;
           box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-          width: 60%;
+          width: 80%;
+          font-size: 14px;
 
           &:hover {
             background-color: $main-color-dark !important;

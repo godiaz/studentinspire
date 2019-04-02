@@ -18,14 +18,14 @@
     </p>
     <p class="student-influencers_right_alert"></p>
     <%= simple_form_for @student_influencer do |f| %>
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :email %>
-      <%= f.input :phone_number %>
+      <%= f.input :first_name, class: "special-inputs" %>
+      <%= f.input :last_name, class: "special-inputs"  %>
+      <%= f.input :email, class: "special-inputs"  %>
+      <%= f.input :phone_number, class: "special-inputs"  %>
       <%= f.input :language_spoken, as: :check_boxes, label: 'What languages do you speak?', collection: @languages %>
-      <%= f.input :degree_subject %>
-      <%= f.input :university, collection: @universities %>
-      <%= f.input :industrial_placement, label: 'Does your course include an industrial placement?' %>
+      <%= f.input :degree_subject , class: "special-inputs"  %>
+      <%= f.input :university, collection: @universities, class: "special-inputs"  %>
+      <%= f.input :industrial_placement, label: 'Does your course include an industrial placement?', class: "format-input-text" %>
       <%= f.input :reason_to_be_ambassador %>
       <%= f.input :social_media, as: :check_boxes, collection: @social_media %>
       <%= f.input :current_university_year, collection: @university_year %>
@@ -38,7 +38,7 @@
       <%= f.input :sexuality, collection: @sexuality %>
       <%= f.input :parents_university_attendance, collection: [ 'Yes', 'No', 'Prefer not to say'] %>
       <%= f.input :disabled_or_handicap, collection: [ 'Yes', 'No', 'Prefer not to say'] %>
-      <%= f.input :mailing_list %>
+      <%= f.input :mailing_list, label: 'Sign me up to the Mailing List' %>
       <%= f.button :submit %>
     <% end %>
   </div>
